@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Solid: next gen apps, data not included</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/material/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Solid: next gen apps, data not included</h1>
+        <p>Nicolas Seydoux, PhD., engineer at Inrupt</p>
+        <object data="css/theme/inrupt/inrupt.svg" type="image/svg+xml" width="150"></object>
+    </header>
+
+    <section class="slide">
+        <h2>Overview</h2>
+        <ol>
+            <li>What issues do we want to solve?</li>
+            <li>Looking under the hood: the standards powering the Web</li>
+            <li>Core Solid concepts</li>
+            <li>Get coding: Practical Solid</li>
+        </ol>
+    </section>
+    
+    <section class="slide">
+        <h2>Let's say you want to build an app</h2>
+        
+    </section>
+
+    <section class="slide">
+        <h2>Pain points for the user</h2>
+        
+    </section>
+
+    <section class="slide">
+        <h2>Standing on the shoulder of giants ? You wish.</h2>
+        competition for user data as much as for quality of service
+    </section>
+
+    <section class="slide">
+        <h2>How we want data to be managed</h2>
+        <div>
+            <ul>
+                <li>Still stored on the Web, to be shared easily</li>
+                <li>You control who can read and write</li>
+                <li>Applications can reuse each other's data</li>
+            </ul>
+        </div>
+
+        <img src="resources/img/ruben/apps_decentralized.png"></img>
+    </section>
+
+    <section class="slide">
+        <h2>Linked Data to the rescue</h2>
+        <table class="plain-table">
+            <tr>
+                <td><i class="fa fa-star" aria-hidden="true"/></td>
+                <td>Data on the Web, free license</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                </td>
+                <td>Data in a structured format</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                </td>
+                <td>Data in an <em>open</em> structured format</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                </td>
+                <td>Represent data using W3C standards</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                    <i class="fa fa-star" aria-hidden="true"/>
+                </td>
+                <td>Link data to other data</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h2>Looking under the hood</h2>
+        <h3>Standards that make the Web</h3>
+    </section>
+    <!-- <section class="slide">
+        <img class="cover" src="resources/taux_recyclage.jpg"></img>
+    </section> -->
+    
+
+    <!-- <section class="slide">
+        <h2>Pour vivre mieux vivons local</h2>
+        
+        <div class="next">
+
+        </div>
+    </section> -->
+
+    <section class="slide">
+        <h2>Looking under the hood</h2>
+        <h3>Standards that make the Web</h3>
+        <h4>Identifying resources with IRI</h4>
+    </section>
+
+    <section class="slide">
+        <h2>Identifying resources with IRI</h2>
+        <ul>
+            <li>Unique and unambiguous
+                <ul>
+                    <li>As in one IRI points to one resource</li>
+                </ul>
+            </li>
+            <li>Dereferencable</li>
+        </ul>
+    </section>
+    <!-- <section class="slide">
+        <h2>URL, URI, IRI</h2>
+        <ul>
+            <li>URL: <b>U</b>niform <b>R</b>esource <b>L</b>ocator</li>
+            <li>URI: <b>U</b>niform <b>R</b>esource <b>I</b>dentifier</li>
+            <li>IRI <b>I</b>nternational <b>R</b>esource <b>I</b>dentifier</li>
+        </ul>
+    </section> -->
+
+    <section class="slide">
+        <h2>Looking under the hood</h2>
+        <h3>Standards that make the Web</h3>
+        <h4>Accessing resources with HTTP</h4>
+    </section>
+
+    <section class="slide">
+        <h2>Accessing resources with HTTP</h2>
+        <ul>
+            <li>Hypertext navigation</li>
+            <li>Content negociation</li>
+            <li>CRUD operations
+                <ul>
+                    <li>PUT, GET, PATCH, DELETE</li>
+                    <li>POST, HEAD, OPTIONS...</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Looking under the hood</h2>
+        <h3>Standards that make Linked Data</h3>
+    </section>
+
+    <section class="slide">
+        <h2>Looking under the hood</h2>
+        <h3>Standards that make Linked Data</h3>
+        <h4>Describing resources with RDF</h4>
+    </section>
+
+    <section class="slide">
+        <h2>Describing resources with RDF</h2>
+        <ul>
+            <li>Typed relations between typed resources</li>
+            <li>Everything has an IRI</li>
+        </ul>
+    </section>
+
+    <!-- <section class="slide">
+        <main>
+            <ul>
+<li>An obelisk is owned by a person.</li>
+<li>An obelisk is built by a sculptor.</li>
+<li>An obelisk has a height, which is a numerical value.</li>
+            </pre>
+        </main>
+    </section> -->
+
+    <!-- <section class="regular-slide">
+        <ul>
+            <li>An http://w3id.org/obelisk/Obelisk is http://w3id.org/obelisk/ownedBy a http://w3id.org/obelisk/Person.</li>
+            <li>An http://w3id.org/obelisk/Obelisk is http://w3id.org/obelisk/builtBy a http://w3id.org/obelisk/Sculptor.</li>
+            <li>An http://w3id.org/obelisk/Obelisk has a http://w3id.org/obelisk/height which is a numerical value.	</li>
+        </ul>
+    </section> -->
+
+    <!-- <section class="slide">
+        <ul>
+            <li>prefix: obelisk: http://w3id.org/obelisk/</li>
+            <li>An obelisk:Obelisk is obelisk:ownedBy a obelisk:Person.</li>
+            <li>An obelisk:Obelisk is obelisk:builtBy a obelisk:Sculptor.</li>
+            <li>An obelisk:Obelisk has a obelisk:height which is a numerical value.	</li>
+        </ul>
+    </section> -->
+
+    <section class="slide">
+        <ul>
+            <li>prefix: obelisk: http://w3id.org/obelisk/</li>
+            <li>An obelisk:Obelisk is obelisk:ownedBy a obelisk:Person.</li>
+            <li>An obelisk:Obelisk is obelisk:builtBy a obelisk:Sculptor.</li>
+            <li>An obelisk:Obelisk has a obelisk:height which is a numerical value.	</li>
+        </ul>
+    </section>
+
+    <section class="regular-slide">
+            <pre><code class="turtle" data-trim >
+@prefix obelisk: &lt;http://w3id.org/obelisk/> .
+@prefix me: &lt;http://your.webid> .
+
+:myFirstObelisk a obelisk:Obelisk ;
+obelisk:ownedBy me: ;
+obelisk:heigth "15.0" .
+            </code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Looking under the hood</h2>
+        <h3>Standards that make Linked Data</h3>
+        <h4>Structuring resources with LDP</h4>
+    </section>
+
+    <section class="slide">
+        <h2>Structuring resources with LDP</h2>
+        <p>LDP = RDF + REST + Containment</p>
+        <pre><code class="html" data-trim >
+@prefix cont: <>.
+@prefix ldp: &lt;http://www.w3.org/ns/ldp#>.
+@prefix tur: &lt;http://www.w3.org/ns/iana/media-types/text/turtle#>.
+
+cont: a ldp:BasicContainer, ldp:Container;
+ldp:contains &lt;resource_1.ttl>, &lt;resource_2.ttl>.
+&lt;resource_1.ttl> a tur:Resource, ldp:Resource.
+&lt;resource_2.ttl> a tur:Resource, ldp:Resource.
+        </code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Why not a SPARQL endpoint?</h2>
+        <div>
+            <h3>Different philosophies</h3>
+            <ul>
+                <li>LDP has little expressivity: it only captures containment</li>
+                <li>SPARQL is a full-blown query language</li>
+            </ul>
+        </div>
+        <div class="fragment">
+            <h3>Upsides of LDP on the Web</h3>
+            <ul>
+                <li>HTTP bindings for simple operations</li>
+                <li>Easier to cache</li>
+                <li>Defines small, focused graphs on which SPARQL may be used</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Looking under the hood</h2>
+        <h3>Standards that make Solid </h3>
+    </section>
+
+    <section class="slide">
+        <h2>Looking under the hood</h2>
+        <h3>Standards that make Solid </h3>
+        <h4>Identifying agents with WebId</h4>
+    </section>
+
+    <section class="slide">
+        <h2>Identifying agents with WebID</h2>
+        <ul>
+            <li>A WebID is an IRI dereferencable into a <code>foaf:ProfileDocument</code></li>
+            <li>Any person, group or bot is identified as an Agent by its WebID</li>
+            <li>WebID is a pre-existing <a href="https://www.w3.org/2005/Incubator/webid/spec/">W3C draft</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Looking under the hood</h2>
+        <h3>Standards that make Solid </h3>
+        <h4>Controling access with Web-AC</h4>
+    </section>
+    
+    <section class="slide">
+        <h2>Controling access with Web-AC</h2>
+        <ul>
+            <li>WebAC defines a vocabulary for access control:
+                <ul>
+                    <li>Read, Append, Write, Control</li>
+                </ul>
+            </li>
+            <li>Access control is defined for &lt;Resource, WebID> pairs</li>
+            <li>An inheritence mechanism based on containment is defined</li>
+        </ul>
+        <pre><code  class="hlttl" data-trim>
+&lt;#authorization1>
+a             acl:Authorization;
+acl:accessTo  &lt;https://alice.example.com/docs/shared-file1>;
+acl:mode      acl:Read, acl:Write, acl:Control;
+acl:agent     &lt;https://alice.example.com/profile/card#me>.
+        </code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Solid, the big picture</h2>
+        <h3>Core concepts</h3>
+    </section>
+
+    <section class="slide">
+        <h2>Solid, the big picture</h2>
+        <h3>Core concepts</h3>
+        <h4>Logging the user in: the Identity Provider</h4>
+    </section>
+
+    <section class="slide">
+        <img src="resources/img/solid/Solid-overview_step-1.svg"></img>
+    </section>
+
+    <section class="slide">
+        <h2>Solid, the big picture</h2>
+        <h3>Core concepts</h3>
+        <h4>Storing the data: the Pod</h4>
+    </section>
+
+    <section class="slide">
+        <img src="resources/img/solid/Solid-overview_step-2.svg"></img>
+    </section>
+
+    <section class="slide">
+        <h2>Solid, the big picture</h2>
+        <h3>Core concepts</h3>
+        <h4>Accessing the data: the apps</h4>
+    </section>
+
+    <section class="slide">
+        <img src="resources/img/solid/Solid-overview_step-3.svg"></img>
+    </section>
+
+    <footer class="badge">
+        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="node_modules/@shower/core/dist/shower.js"></script>
+    <script src="node_modules/d3/dist/d3.min.js"></script>
+    <script src="./scripts/agri_co2_breakdown.js"></script>
+</body>
+</html>
