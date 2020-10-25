@@ -1,0 +1,15 @@
+.schema {
+   height: 90%;
+}
+
+.schema.place.right {
+   margin-right: 5%;
+}
+
+pre code {
+   font-size: 0.8em;
+}
+
+.bg {
+   background: crimson;
+}
