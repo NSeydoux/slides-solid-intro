@@ -13,3 +13,30 @@ pre code {
 .bg {
    background: crimson;
 }
+
+.section-title {
+   text-align: center;
+}
+
+img.place.middle.bottom {
+   margin-bottom: 5%;
+}
+
+p.note {
+   margin-left: 3%;
+   font-size: 0.8em;
+}
+
+.slide ul.place.left {
+   margin-left: 5%;
+}
+
+.slide::after {
+   position: absolute;
+   top: 2%;
+   right: 2%;
+   line-height: 18px;
+   text-align: right;
+   counter-increment: slide;
+   content: counter(slide);
+}

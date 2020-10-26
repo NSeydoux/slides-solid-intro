@@ -4,8 +4,8 @@
     <title>Solid: next gen apps, data not included</title>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-    <link rel="stylesheet" href="./style/style.css"></link>
     <link rel="stylesheet" href="node_modules/@shower/material/styles/styles.css"></link>
+    <link rel="stylesheet" href="./style/style.css"></link>
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css"></link>
     <style>
         .shower {
@@ -32,47 +32,130 @@
     </section>
 
     <section class="slide">
-        <h2>Components of the Solid architecture</h2>
+        <h2 class="section-title place center">Why would you want to build a Solid app?</h2>
     </section>
 
     <section class="slide">
+        <h2>Pain points building a new app</h2>
+        <div class="columns two">
+            
+            <ul>
+                <h3>For the developer</h3>
+                <li>Onboarding is tedious</li>
+                <li>Competing with established apps</li>
+                <li>Liability for data</li>
+            </ul>
+            
+            <ul class="next">
+                <h3>For the user</h3>
+                <li>Accounts proliferation</li>
+                <li>Data overlap</li>
+                <li>Loss of control</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>What we have vs. what we want</h2>
+        <img class="place middle bottom" src="resources/img/ruben/apps_centralized.png"></img>
+        <p class="note place bottom left">Image courtesy of <a href="https://ruben.verborgh.org/">Ruben Verborgh</a></p>
+    </section>
+
+    <section class="slide">
+        <h2>What we have vs. what we want</h2>
+        <img class="place middle bottom" src="resources/img/ruben/apps_decentralized.png"></img>
+        <p class="note place bottom left">Image courtesy of <a href="https://ruben.verborgh.org/">Ruben Verborgh</a></p>
+    </section>
+
+    <section class="slide">
+        <h2 class="section-title place center">Components of the Solid architecture</h2>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>The user</h2>
+            <li>They control the data.</li>
+            <li>They use apps to get services.</li>
+        </ul>
         <img 
             src="../resources/animations/architecture/1.svg" 
             type="image/svg+xml" 
-            class="schema place center">
+            class="schema place right">
         </img>
     </section>
 
     <section class="slide">
+        <ul>
+            <h2>The app</h2>
+            <li>It consumes the data.</li>
+            <li>It creates more data.</li>
+        </ul>
         <img 
             src="../resources/animations/architecture/2.svg" 
             type="image/svg+xml" 
-            class="schema place center">
+            class="schema place right">
         </img>
     </section>
 
     <section class="slide">
+        <ul>
+            <h2>The Pod</h2>
+            <li>It hosts the data.</li>
+            <li>It enforces access permissions.</li>
+        </ul>
         <img 
             src="../resources/animations/architecture/3.svg" 
             type="image/svg+xml" 
-            class="schema place center">
+            class="schema place right">
         </img>
     </section>
 
     <section class="slide">
+        <ul>
+            <h2>The Identity Provider</h2>
+            <li>IdP for short.</li>
+            <li>It identifies the user.</li>
+        </ul>
         <img 
             src="../resources/animations/architecture/4.svg" 
             type="image/svg+xml" 
-            class="schema place center">
+            class="schema place right">
         </img>
-    </section>
-    
-    <section class="slide">
-        <h2>Logging in a Solid app</h2>
     </section>
 
     <section class="slide">
-        <ul><li>The user provide their WebID to the app.</li></ul>
+        <h2>Existing implementations</h2>
+        <div class="columns three">
+            <ul>
+                <h3>Pod server</h3>
+                <li>NSS</li>
+                <li>CSS</li>
+                <li>Inrupt's ESS</li>
+                <li>Startin'blox DjangoLDP</li>
+                <li>...</li>
+            </ul>
+            <ul>
+                <h3>IdP</h3>
+                <li>NSS</li>
+                <li>CSS (soon)</li>
+                <li>MitreID ID broker</li>
+            </ul>
+            <ul>
+                <h3>Apps</h3>
+                <li>Too many to list!</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="slide">
+        <h2 class="section-title place center">Logging in a Solid app</h2>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>Profile discovery</h2>
+            <li>The user provide their WebID to the app.</li>
+        </ul>
         <img 
             src="../resources/animations/login/1.svg" 
             type="image/svg+xml" 
@@ -82,6 +165,7 @@
 
     <section class="slide">
         <ul>
+            <h2>IdP discovery</h2>
             <li>The app looks up the user's profile</li>
             <li>The profile links to the identity provider.</li>
         </ul>
@@ -94,6 +178,7 @@
 
     <section class="slide">
         <ul>
+            <h2>The OIDC dance</h2>
             <li>The user logs in the identity provider via OIDC</li>
         </ul>
         <img 
@@ -105,6 +190,7 @@
 
     <section class="slide">
         <ul>
+            <h2>OIDC outcome</h2>
             <li>The app gets an access and an ID token.</li>
             <li>The ID token contains the WebID</li>
         </ul>
@@ -117,6 +203,7 @@
 
     <section class="slide">
         <ul>
+            <h2>Authenticated access</h2>
             <li>The app can access private resources.</li>
         </ul>
         <img 
