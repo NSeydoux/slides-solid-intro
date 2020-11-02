@@ -3,15 +3,17 @@
 }
 
 .schema.place.right {
-   margin-right: 5%;
+   margin-right: 3%;
+}
+
+.schema.rectangle {
+   height: 70%;
+   margin-bottom: 3%;
+   margin-right: 3%;
 }
 
 pre code {
    font-size: 0.8em;
-}
-
-.bg {
-   background: crimson;
 }
 
 .section-title {
@@ -39,4 +41,27 @@ p.note {
    text-align: right;
    counter-increment: slide;
    content: counter(slide);
+}
+
+header.caption img {
+   width: 7%;
+   flex-basis: 40%;
+}
+
+header.caption {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* https://www.canva.com/colors/color-palettes/summer-splash/ */
+.caption {
+   --color-key: #189ab4;
+   --color-dark: #05445e;
+   --color-medium: #75e6da;
+   --color-light: #d4f1f4;
+   --diagonal: linear-gradient(
+        135deg, var(--color-key) 50%,
+        rgba(0, 0, 0, 0.1) 50%
+    );
 }

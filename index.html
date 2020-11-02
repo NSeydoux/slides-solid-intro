@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Solid: next gen apps, data not included</title>
+    <title>Solid, data not included</title>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
     <link rel="stylesheet" href="node_modules/@shower/material/styles/styles.css"></link>
@@ -16,12 +16,12 @@
 <body class="shower list">
 
     <header class="caption">
-        <h1>Solid: next gen apps, data not included</h1>
+        <h1><img src="./resources/icons/solid.png"></img>: next gen apps, data not included</h1>
         <p>Nicolas Seydoux, PhD., engineer at Inrupt</p>
         <object data="css/theme/inrupt/inrupt.svg" type="image/svg+xml" width="150"></object>
     </header>
 
-    <section class="slide">
+    <!-- <section class="slide">
         <h2>Overview</h2>
         <ol>
             <li>What issues do we want to solve?</li>
@@ -29,7 +29,7 @@
             <li>Core Solid concepts</li>
             <li>Get coding: Practical Solid</li>
         </ol>
-    </section>
+    </section> -->
 
     <section class="slide">
         <h2 class="section-title place center">Why would you want to build a Solid app?</h2>
@@ -55,8 +55,8 @@
         </div>
     </section>
 
-    <section class="slide">
-        <h2>What we have vs. what we want</h2>
+    <!-- <section class="slide">
+        <h2>What we have...</h2>
         <img class="place middle bottom" src="resources/img/ruben/apps_centralized.png"></img>
         <p class="note place bottom left">Image courtesy of <a href="https://ruben.verborgh.org/">Ruben Verborgh</a></p>
     </section>
@@ -65,7 +65,7 @@
         <h2>What we have vs. what we want</h2>
         <img class="place middle bottom" src="resources/img/ruben/apps_decentralized.png"></img>
         <p class="note place bottom left">Image courtesy of <a href="https://ruben.verborgh.org/">Ruben Verborgh</a></p>
-    </section>
+    </section> -->
 
     <section class="slide">
         <h2 class="section-title place center">Components of the Solid architecture</h2>
@@ -216,17 +216,82 @@
     <section class="slide">
         <h2>Build your app</h2>
         <ul>
-            <li><a href="https://www.npmjs.com/package/@inrupt/solid-client-authn-browser">@inrupt/solid-client-authn-brower</a> <a href="https://github.com/inrupt/solid-client-authn-js"><i class="fab fa-github"></i></a></li>
-            <li>A library to log in a browser app.</li>
+            <li><a href="https://www.npmjs.com/package/@inrupt/solid-client-authn-browser">@inrupt/solid-client-authn-brower</a> <a href="https://github.com/inrupt/solid-client-authn-js"><i class="fab fa-github"></i></a>: Authenticate a browser app.</li>
         </ul>
         <pre>
-<code class="javascript bg">const [session, setSession] = useState(new AuthSession({}, "mySession"));
+<code class="javascript bg">const [session, setSession] = useState(new Session());
 useEffect(() => {
-    session.handleIncomingRedirect(new URL(window.location.href))
+    session.handleIncomingRedirect(window.location.href)
         .then((info) => { console.log(`Logged in as ${info.webid}`) });
     }
 }, [session]);</code>
         </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="section-title place center">Solid app use cases</h2>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>Exploring linked data</h2>
+            <li>Data in a Pod is 5-<i class="fas fa-star"></i>.</li>
+            <li>Web-native profiles.</li>
+        </ul>
+        <img 
+            src="../resources/animations/usage/explore.svg" 
+            type="image/svg+xml" 
+            class="schema rectangle place right bottom">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Don't repeat yourself</h2>
+        <ul style="width: 30%;">
+            
+            <li>The user comes with their data.</li>
+            <li>Easier onboarding.</li>
+            <li>Experiment new apps!</li>
+        </ul>
+        <img 
+            src="../resources/animations/usage/dry.svg" 
+            type="image/svg+xml" 
+            class="schema rectangle place right bottom">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Reuse data from other apps</h2>
+        <ul>
+            <li>Decorralated app and data.</li>
+            <li>User-centric approach.</li>
+        </ul>
+        <img 
+            src="../resources/animations/usage/reuse.svg" 
+            type="image/svg+xml" 
+            class="schema rectangle place right bottom">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Build your app</h2>
+        <ul>
+            <li><a href="https://www.npmjs.com/package/@inrupt/solid-client">@inrupt/solid-client</a> <a href="https://github.com/inrupt/solid-client-js"><i class="fab fa-github"></i></a>: Read/write data and manage access to Pods.</li>
+            <li><a href="https://www.npmjs.com/package/@inrupt/solid-ui-react">@inrupt/solid-ui-react</a> <a href="https://github.com/inrupt/solid-ui-react"><i class="fab fa-github"></i></a>: React components around <code>solid-client</code>.</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>The future: shapes for interoperability</h2>
+        <ul>
+            <li>App side: Validate assumptions.</li>
+            <li>User side: Prevent corruption.</li>
+        </ul>
+        <img 
+            src="../resources/animations/usage/interoperability.svg" 
+            type="image/svg+xml" 
+            class="schema rectangle place right bottom">
+        </img>
     </section>
 
     <footer class="badge">
