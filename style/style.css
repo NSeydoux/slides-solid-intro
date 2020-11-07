@@ -54,6 +54,15 @@ header.caption {
    justify-content: center;
 }
 
+.link-center {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.logo-final {
+  margin-top: 8%;
+}
+
 /* https://www.canva.com/colors/color-palettes/summer-splash/ */
 .caption {
    --color-key: #189ab4;
