@@ -35,7 +35,6 @@ p.note {
 
 .slide::after {
    position: absolute;
-   top: 2%;
    right: 2%;
    line-height: 18px;
    text-align: right;
