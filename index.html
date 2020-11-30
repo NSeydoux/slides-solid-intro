@@ -515,10 +515,8 @@ useEffect(() => {
       <div class="place middle bottom link-center">
         <p><a href="https://solidproject.org">https://solidproject.org</a></p>
         <p><a href="https://docs.inrupt.com/">https://docs.inrupt.com/</a></p>
-        <p><a href="https://zwifi.eu/slides/2020/semwebpro/">https://zwifi.eu/slides/2020/semwebpro/</a></p>
+        <p><a href="https://zwifi.eu/slides/2020/data-sharing-winter-school/">https://zwifi.eu/slides/2020/data-sharing-winter-school/</a></p>
       </div>
-          
-      
   </section>
 
     
@@ -526,24 +524,6 @@ useEffect(() => {
     <footer class="badge">
         <a href="https://github.com/shower/shower">Fork me on GitHub</a>
     </footer>
-
-    <div class="progress"></div>
-    <script type="text/javascript">
-        (async () => {
-            const parts = document.getElementsByClassName("part");
-            for(part of parts) {
-                await fetch(part.getAttribute("path"))
-                .then(response => response.text())
-                .then(data => {
-                    part.innerHTML = data
-                });
-            }
-        })()
-    </script>
     <script src="node_modules/@shower/core/dist/shower.js"></script>
-    <!-- <script src="lib/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>  -->
-    <!-- <script src="node_modules/d3/dist/d3.min.js"></script>
-    <script src="./scripts/agri_co2_breakdown.js"></script> -->
 </body>
 </html>
