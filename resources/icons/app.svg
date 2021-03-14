@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="-22.456416"
+     inkscape:cx="-673.88499"
      inkscape:cy="161.71623"
      inkscape:document-units="mm"
      inkscape:current-layer="g823"
@@ -35,9 +35,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1366"
-     inkscape:window-height="713"
-     inkscape:window-x="0"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="67"
      inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
@@ -61,26 +61,29 @@
        id="g3786">
       <g
          id="g823">
-        <path
-           sodipodi:type="star"
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:9.02200031;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path2549"
-           sodipodi:sides="6"
-           sodipodi:cx="108.85715"
-           sodipodi:cy="109.52381"
-           sodipodi:r1="76.888199"
-           sodipodi:r2="66.587135"
-           sodipodi:arg1="0.5252436"
-           sodipodi:arg2="1.0488424"
-           inkscape:flatsided="true"
-           inkscape:rounded="0"
-           inkscape:randomized="0"
-           d="M 175.38096,148.07738 108.73068,186.41191 42.20687,147.85833 42.333338,70.97024 108.98361,32.635716 175.50742,71.189288 Z" />
-        <path
-           style="fill:#000000;fill-opacity:1;stroke-width:0.18190104"
-           id="path2"
-           d="M 151.02621,139.31605 H 63.713717 c -1.608005,0 -2.910416,1.30241 -2.910416,2.91042 v 5.82082 c 0,1.60801 1.302411,2.91043 2.910416,2.91043 h 87.312493 c 1.60801,0 2.91042,-1.30242 2.91042,-2.91043 v -5.82082 c 0,-1.60801 -1.30241,-2.91042 -2.91042,-2.91042 z m -55.297913,-11.64167 -11.641662,-5.82083 11.641662,-5.82084 5.820833,-11.64167 5.82083,11.64167 11.64166,5.82084 -11.64166,5.82083 -2.91042,5.82084 h 37.83542 L 126.57689,96.818522 a 11.633481,11.633481 0 0 1 -0.34379,-8.267395 l 10.24103,-30.72673 -34.121,19.49797 A 23.281333,23.281333 0 0 0 92.628709,88.081815 L 72.444966,133.49522 h 26.193749 z m 11.641663,-40.745814 2.91042,-5.820835 2.91041,5.820835 5.82083,2.910411 -5.82083,2.910422 -2.91041,5.82083 -2.91042,-5.82083 -5.82083,-2.910422 z"
-           inkscape:connector-curvature="0" />
+        <g
+           id="g47">
+          <path
+             d="M 175.38096,148.07738 108.73068,186.41191 42.20687,147.85833 42.333338,70.97024 108.98361,32.635716 175.50742,71.189288 Z"
+             inkscape:randomized="0"
+             inkscape:rounded="0"
+             inkscape:flatsided="true"
+             sodipodi:arg2="1.0488424"
+             sodipodi:arg1="0.5252436"
+             sodipodi:r2="66.587135"
+             sodipodi:r1="76.888199"
+             sodipodi:cy="109.52381"
+             sodipodi:cx="108.85715"
+             sodipodi:sides="6"
+             id="path2549"
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:9.02200031;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             sodipodi:type="star" />
+          <path
+             inkscape:connector-curvature="0"
+             d="M 151.02621,139.31605 H 63.713717 c -1.608005,0 -2.910416,1.30241 -2.910416,2.91042 v 5.82082 c 0,1.60801 1.302411,2.91043 2.910416,2.91043 h 87.312493 c 1.60801,0 2.91042,-1.30242 2.91042,-2.91043 v -5.82082 c 0,-1.60801 -1.30241,-2.91042 -2.91042,-2.91042 z m -55.297913,-11.64167 -11.641662,-5.82083 11.641662,-5.82084 5.820833,-11.64167 5.82083,11.64167 11.64166,5.82084 -11.64166,5.82083 -2.91042,5.82084 h 37.83542 L 126.57689,96.818522 a 11.633481,11.633481 0 0 1 -0.34379,-8.267395 l 10.24103,-30.72673 -34.121,19.49797 A 23.281333,23.281333 0 0 0 92.628709,88.081815 L 72.444966,133.49522 h 26.193749 z m 11.641663,-40.745814 2.91042,-5.820835 2.91041,5.820835 5.82083,2.910411 -5.82083,2.910422 -2.91041,5.82083 -2.91042,-5.82083 -5.82083,-2.910422 z"
+             id="path2"
+             style="fill:#000000;fill-opacity:1;stroke-width:0.18190104" />
+        </g>
       </g>
     </g>
   </g>
