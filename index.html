@@ -20,44 +20,144 @@
     </header>
 
     <section class="slide">
-      <ul>
-          <h2>Static client registration</h2>
-          <li>The developer register their app to the IdP.</li>
-      </ul>
-      <img 
-          src="./resources/animations/login/static-registration_1.svg" 
-          type="image/svg+xml" 
-          class="schema place right">
-      </img>
-  </section>
-
-  <section class="slide">
-    <ul>
-        <h2>App registration</h2>
-        <li>The developer register their app to the IdP.</li>
-    </ul>
-    <img 
-        src="./resources/animations/login/static-registration_2.svg" 
-        type="image/svg+xml" 
-        class="schema place right">
-    </img>
-</section>
+      <h2 class="section-title place center">Components of the Solid architecture</h2>
+    </section>
 
     <section class="slide">
       <ul>
-          <h2>Profile discovery</h2>
-          <li>The user provide their WebID to the app.</li>
+          <h2>The Resource Owner</h2>
+          <li>Fancy name for a user</li>
+          <li>They control the data.</li>
+          <li>They use apps to get services.</li>
       </ul>
       <img 
-          src="./resources/animations/login/1.svg" 
+          src="./resources/animations/architecture/1.svg" 
           type="image/svg+xml" 
           class="schema place right">
       </img>
-  </section>
+    </section>
 
-  <section class="slide">
+    <section class="slide">
       <ul>
-          <h2>IdP discovery</h2>
+          <h2>The Client</h2>
+          <li>Fancy name for an application</li>
+          <li>It consumes the data.</li>
+          <li>It creates more data.</li>
+      </ul>
+      <img 
+          src="./resources/animations/architecture/2.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+    </section>
+
+    <section class="slide">
+      <ul>
+          <h2>The Resource Server</h2>
+          <li>Fancy name for a Pod.</li>
+          <li>It hosts the data.</li>
+          <li>It enforces access permissions.</li>
+      </ul>
+      <img 
+          src="./resources/animations/architecture/3.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+    </section>
+
+    <section class="slide">
+      <ul>
+          <h2>The Identity Provider</h2>
+          <li>It identifies the user.</li>
+      </ul>
+      <img 
+          src="./resources/animations/architecture/4.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+    </section>
+
+    <section class="slide">
+      <h2 class="section-title place center">Overview of the OIDC "danse"</h2>
+    </section>
+
+    <section class="slide">
+      <h2>RO requests login to Client</h2>
+      <ul>
+        <li>The Client doesn't manage the RO identity</li>
+        <li>The Client dedirects the RO to the IdP</li>
+    </ul>
+
+    TODO
+
+    </section>
+
+    <section class="slide">
+      <h2>RO logs in IdP</h2>
+      <ul>
+          <li>The user logs in the identity provider via OIDC</li>
+          <li>The user is redirected to the app</li>
+          <li>The app does an authenticated request to the IdP</li>
+      </ul>
+      <img 
+          src="./resources/animations/login/3.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+    </section>
+
+    <section class="slide">
+      <h2>IdP sends tokens to Client</h2>
+      <ul>
+          <li>The app gets an access and an ID token.</li>
+      </ul>
+      <img 
+          src="./resources/animations/login/4.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+    </section>
+
+    <section class="slide">
+      <ul>
+          <h2>Authenticated access</h2>
+          <li>The app can access private resources.</li>
+      </ul>
+      <img 
+          src="./resources/animations/login/5.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+    </section>
+
+    <section class="slide">
+      <div class="section-title place center">
+        <h2>What does Solid-OIDC add?</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="section-title place center">
+        <h2>What does Solid-OIDC add?</h2>
+        <h3>Universal user identity</h3>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Token links to WebID</h2>
+      <ul>
+          <li>The app looks up the user's profile</li>
+      </ul>
+      <img 
+        src="./resources/animations/login/1.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+      </img>
+    </section>
+
+    <section class="slide">
+      <h2>IdP discovery</h2>
+      <ul>
           <li>The app looks up the user's profile</li>
           <li>The profile links to the identity provider.</li>
       </ul>
@@ -66,73 +166,92 @@
           type="image/svg+xml" 
           class="schema place right">
       </img>
+    </section>
+
+    <section class="slide">
+      <h2>IdP verification</h2>
+      <ul>
+          <li>The RS looks at the token</li>
+          <li>It checks that the IdP is trusted by the RO</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Access control</h2>
+      <ul>
+        <li>The RS enforces access control based on RO WebID</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="section-title place center">
+        <h2>What does Solid-OIDC add?</h2>
+        <h3>Universal Client identity</h3>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>OIDC security model</h2>
+      <ul>
+          <li>The Client controls some IRI</li>
+          <li>The IdP can check whether a Client controls a given IRI</li>
+          <li>To do so, the IdP must have some information about the client</li>
+      </ul>
+      
+    </section>
+
+    <section class="slide">
+      <h2>Static client registration</h2>
+      <ul>
+          <li>The developer register their app to the IdP.</li>
+          <li>The obtained Client credentials are long-lasting.</li>
+      </ul>
+      TODO merge with next slide
+      <img 
+          src="./resources/animations/login/static-registration_1.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+    </section>
+
+  <section class="slide">
+    <ul>
+        <h2>Static client registration</h2>
+        <li>The developer register their app to the IdP.</li>
+    </ul>
+    <img 
+        src="./resources/animations/login/static-registration_2.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
   </section>
 
   <section class="slide">
     <ul>
         <h2>Dynamic client registration</h2>
         <li>Only if not statically registered</li>
-        <li>The client ID is only temporary</li>
+        <li>The Client credentials are ephemeral</li>
     </ul>
     <img 
         src="./resources/animations/login/dynamic-registration.svg" 
         type="image/svg+xml" 
         class="schema place right">
     </img>
-</section>
-
-    <section class="slide">
-        <ul>
-            <h2>The OIDC dance</h2>
-            <li>The user logs in the identity provider via OIDC</li>
-            <li>The user is redirected to the app</li>
-            <li>The app does an authenticated request to the IdP</li>
-        </ul>
-        <img 
-            src="./resources/animations/login/3.svg" 
-            type="image/svg+xml" 
-            class="schema place right">
-        </img>
-    </section>
-
-    <section class="slide">
-        <ul>
-            <h2>OIDC outcome</h2>
-            <li>The app gets an access and an ID token.</li>
-            <li>The ID token contains the WebID</li>
-        </ul>
-        <img 
-            src="./resources/animations/login/4.svg" 
-            type="image/svg+xml" 
-            class="schema place right">
-        </img>
-    </section>
-
-    <section class="slide">
-        <ul>
-            <h2>Authenticated access</h2>
-            <li>The app can access private resources.</li>
-        </ul>
-        <img 
-            src="./resources/animations/login/5.svg" 
-            type="image/svg+xml" 
-            class="schema place right">
-        </img>
-    </section>
-
-    <section class="slide">
-      <ul>
-          <h2>Client WebID</h2>
-          <li>No manual registration to the IdP</li>
-          <li>The client ID is permanent</li>
-          <li>Application access control can be enforced</li>
-      </ul>
-      <img 
-          src="./resources/animations/login/client_webid.svg" 
-          type="image/svg+xml" 
-          class="schema place right">
-      </img>
   </section>
+
+  <section class="slide">
+    <h2>Solid-OIDC Client Identifier</h2>
+    <ul>
+        <li>No manual registration to the IdP</li>
+        <li>The client ID is permanent</li>
+        <li>Application access control can be enforced</li>
+    </ul>
+    <img 
+        src="./resources/animations/login/client_webid.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+</section>
 
   <section class="slide">
     <ul>
