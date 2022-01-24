@@ -20,15 +20,15 @@
     </header>
 
     <section class="slide">
-      <h2 class="section-title place center">Components of the Solid architecture</h2>
+      <h2 class="section-title place center">An overview of OIDC stakeholders</h2>
     </section>
 
     <section class="slide">
+      <h2>The Resource Owner</h2>
       <ul>
-          <h2>The Resource Owner</h2>
-          <li>Fancy name for a user</li>
-          <li>They control the data.</li>
-          <li>They use apps to get services.</li>
+          <li>(Fancy name for a user)</li>
+          <li>Controls the data.</li>
+          <li>Uses applications to get services.</li>
       </ul>
       <img 
           src="./resources/animations/architecture/1.svg" 
@@ -38,11 +38,12 @@
     </section>
 
     <section class="slide">
+      <h2>The Client</h2>
       <ul>
-          <h2>The Client</h2>
-          <li>Fancy name for an application</li>
-          <li>It consumes the data.</li>
-          <li>It creates more data.</li>
+          <li>(Fancy name for an application)</li>
+          <li>Consumes the data.</li>
+          <li>Creates more data.</li>
+          <li>Receives delagation by the Resource Owner.</li>
       </ul>
       <img 
           src="./resources/animations/architecture/2.svg" 
@@ -52,8 +53,8 @@
     </section>
 
     <section class="slide">
+      <h2>The Resource Server</h2>
       <ul>
-          <h2>The Resource Server</h2>
           <li>Fancy name for a Pod.</li>
           <li>It hosts the data.</li>
           <li>It enforces access permissions.</li>
@@ -66,9 +67,11 @@
     </section>
 
     <section class="slide">
+      <h2>The OIDC Provider</h2>
       <ul>
-          <h2>The Identity Provider</h2>
-          <li>It identifies the user.</li>
+          <li>It is trusted by the Resource Owner.</li>
+          <li>It is trusted by the Resource Server.</li>
+          <li>This is where the Resource Owner account is.</li>
       </ul>
       <img 
           src="./resources/animations/architecture/4.svg" 
@@ -85,46 +88,91 @@
       <h2>RO requests login to Client</h2>
       <ul>
         <li>The Client doesn't manage the RO identity</li>
-        <li>The Client dedirects the RO to the IdP</li>
+        <li>The Client dedirects the RO to the OP</li>
+        <li>Some information about the client is sent to the OP*</li>
     </ul>
 
-    TODO
+    <img 
+          src="./resources/animations/login/oidc/1_ro-login-rp.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
 
     </section>
 
     <section class="slide">
-      <h2>RO logs in IdP</h2>
+      <h2>RO logs in OP</h2>
       <ul>
-          <li>The user logs in the identity provider via OIDC</li>
-          <li>The user is redirected to the app</li>
-          <li>The app does an authenticated request to the IdP</li>
+          <li>The RO authenticates to the OP.</li>
+          <li>The authentication method is out of scope.</li>
+          <li>The Client never sees the RO credentials.</li>
       </ul>
       <img 
-          src="./resources/animations/login/3.svg" 
+          src="./resources/animations/login/oidc/2_ro-login-op.svg" 
           type="image/svg+xml" 
           class="schema place right">
       </img>
     </section>
 
     <section class="slide">
-      <h2>IdP sends tokens to Client</h2>
+      <h2>OP describes what Client wants to RO</h2>
       <ul>
-          <li>The app gets an access and an ID token.</li>
+          <li>The Client details what type of data it wants to access.</li>
+          <li>The RO can approve or deny.</li>
+          <li>The OP remembers the response for future requests.</li>
+      </ul>
+      
+      TODO
+
+    </section>
+
+    <section class="slide">
+      <h2>OP redirects RO to Client</h2>
+      <ul>
+          <li>The OP provides the Client with a single-use code.</li>
+          <li>The OP asociates the code to the Client.</li>
       </ul>
       <img 
-          src="./resources/animations/login/4.svg" 
+          src="./resources/animations/login//oidc/3_ro-redirect-rp.svg" 
           type="image/svg+xml" 
           class="schema place right">
       </img>
     </section>
 
     <section class="slide">
+      <h2>Client sends code</h2>
       <ul>
-          <h2>Authenticated access</h2>
-          <li>The app can access private resources.</li>
+          <li>The Client sends the code to the OP <br/>along with its information.</li>
+          <li>(This is transparent to the RO.)</li>
       </ul>
       <img 
-          src="./resources/animations/login/5.svg" 
+          src="./resources/animations/login//oidc/4_backchannel-request.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+    </section>
+
+    <section class="slide">
+      <h2>OP sends tokens</h2>
+      <ul>
+          <li>The ID token is meant for the Client.</li>
+          <li>The Access Token is meant for the RS.</li>
+      </ul>
+      <img 
+          src="./resources/animations/login/oidc/5_backchannel-response.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+    </section>
+
+    <section class="slide">
+      <h2>Authenticated access</h2>
+      <ul>
+          <li>The Client can access private resources.</li>
+          <li>The OP lets the RO revoke the Access Token.</li>
+      </ul>
+      <img 
+      src="./resources/animations/login//oidc/6_authenticated-access.svg" 
           type="image/svg+xml" 
           class="schema place right">
       </img>
