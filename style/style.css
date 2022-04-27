@@ -11,9 +11,7 @@
 }
 
 .schema.rectangle {
-   height: 70%;
-   margin-bottom: 3%;
-   margin-right: 3%;
+   width: 100%;
 }
 
 pre code {
@@ -112,4 +110,17 @@ header.caption {
 
 .title-slide {
    text-align: center;
+}
+
+.cite {
+  margin: 5px;
+  font-style: italic;
+}
+
+.bibliography ul li {
+  font-size: small;
+}
+
+.slide h2 {
+  font-size: 1.8em;
 }
