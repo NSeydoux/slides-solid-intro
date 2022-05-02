@@ -1,0 +1,126 @@
+.schema {
+   height: 90%;
+}
+
+.schema.bottom {
+   margin-bottom: -5%;
+}
+
+.schema.place.right {
+   margin-right: 3%;
+}
+
+.schema.rectangle {
+   width: 100%;
+}
+
+pre code {
+   font-size: 0.8em;
+}
+
+.section-title {
+   text-align: center;
+}
+
+img.place.middle.bottom {
+   margin-bottom: 5%;
+}
+
+p.call-action {
+   text-align: center;
+}
+
+p.note {
+   margin-left: 3%;
+   font-size: 0.8em;
+}
+
+.slide ul.place.left {
+   margin-left: 5%;
+}
+
+.slide::after {
+   position: absolute;
+   /* top: 2%; */
+   right: 2%;
+   line-height: 18px;
+   text-align: right;
+   counter-increment: slide;
+   content: counter(slide);
+}
+
+header.caption img {
+   width: 7%;
+   flex-basis: 40%;
+}
+
+header.caption {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.link-center {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.logo-final {
+  margin-top: 8%;
+}
+
+/* https://www.canva.com/colors/color-palettes/summer-splash/ */
+.caption {
+   --color-key: #189ab4;
+   --color-dark: #05445e;
+   --color-medium: #75e6da;
+   --color-light: #d4f1f4;
+   --diagonal: linear-gradient(
+        135deg, var(--color-key) 50%,
+        rgba(0, 0, 0, 0.1) 50%
+    );
+}
+
+.figure {
+   /* height: 75%; */
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   max-width:50%;
+   max-height:50%;
+}
+
+.figure-large {
+   /* height: 75%; */
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   max-width:75%;
+   max-height:75%;
+}
+
+.logo {
+   /* height: 75%; */
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   /* max-width:50%;
+   max-height:50%; */
+}
+
+.title-slide {
+   text-align: center;
+}
+
+.cite {
+  margin: 5px;
+  font-style: italic;
+}
+
+.bibliography ul li {
+  font-size: small;
+}
+
+.slide h2 {
+  font-size: 1.8em;
+}

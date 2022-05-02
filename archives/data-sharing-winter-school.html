@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Solid, data not included</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css"></link>
+    <link rel="stylesheet" href="./style/style.css"></link>
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css"></link>
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Solid: next gen apps, data not included</h1>
+    </header>
+
+    <!-- <section class="slide">
+        <h2>Overview</h2>
+        <ol>
+            <li>What issues do we want to solve?</li>
+            <li>Looking under the hood: the standards powering the Web</li>
+            <li>Core Solid concepts</li>
+            <li>Get coding: Practical Solid</li>
+        </ol>
+    </section> -->
+
+    <section class="slide title-slide">
+        <img class="figure" src="./resources/logos/solid-emblem.svg" width="180"></img>
+        <h2>Next gen apps, data not included</h2>
+        <h3>Nicolas Seydoux, PhD., engineer at Inrupt</h3>
+        <img class="figure" src="./resources/inrupt/inrupt.svg" width="250"></img>
+    </section>
+
+    <section class="slide">
+        <h2>What can you expect from this lecture?</h2>
+        <ul>
+            <li>Identify the <b>use cases</b> for Solid</li>
+            <li>Get an overview of the Solid pieces, and <b>how they fit together</b></li>
+            <li>Links to additional material and some implementations</li>
+        </ul>
+        <p class="call-action">For <b>follow-up questions</b>, breakout room or email at <code>nseydoux@inrupt.com</code></p>
+    </section>
+
+    <section class="slide">
+        <h2 class="section-title place center">Why would you want to build a Solid app?</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Non-solid apps bundle data</h2>
+        <ul>
+            <li>Data <b>bundled with the application</b>, hard to reuse.</li>
+            <li>Need manual import/export.</li>
+        </ul>
+        <img 
+            src="./resources/animations/use_case/legacy.svg" 
+            type="image/svg+xml" 
+            class="schema place right"
+            width="300">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Solid decorrelates data from app</h2>
+        <ul>
+            <li>Data becomes <b>available for reuse</b>.</li>
+            <li><b>Apps can be plugged</b> on the data.</li>
+            <li>Experimenting different apps becomes easy.</li>
+            <li>Discover new things from your data</li>
+        </ul>
+        <img 
+            src="./resources/animations/use_case/solid-concept.svg" 
+            type="image/svg+xml" 
+            class="schema place right"
+            width="300">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Non-solid system integration</h2>
+        <ul>
+            <li>Sub-system are chained 1-on-1</li>
+            <li>Data is transformed at each step</li>
+        </ul>
+        <img 
+            src="./resources/animations/use_case/legacy-integration_1.svg" 
+            type="image/svg+xml" 
+            class="schema place bottom"
+            width="75%">
+        </img>
+        <!-- Instead of having each app consuming data and sending it to the next, apps can be orchestrated on the self-sufficient data store -->
+    </section>
+
+    <section class="slide">
+        <h2>Non-solid system integration</h2>
+        <ul>
+            <li>Sub-system are chained 1-on-1</li>
+            <li>Data is transformed at each step</li>
+        </ul>
+        <img 
+            src="./resources/animations/use_case/legacy-integration_2.svg" 
+            type="image/svg+xml" 
+            class="schema place bottom"
+            width="75%">
+        </img>
+        <!-- Instead of having each app consuming data and sending it to the next, apps can be orchestrated on the self-sufficient data store -->
+    </section>
+
+    <section class="slide">
+        <h2>Non-solid system integration</h2>
+        <ul>
+            <li>Sub-system are chained 1-on-1</li>
+            <li>Data is transformed at each step</li>
+        </ul>
+        <img 
+            src="./resources/animations/use_case/legacy-integration_3.svg" 
+            type="image/svg+xml" 
+            class="schema place bottom"
+            width="75%">
+        </img>
+        <!-- Instead of having each app consuming data and sending it to the next, apps can be orchestrated on the self-sufficient data store -->
+    </section>
+
+    <section class="slide">
+        <h2>Solid-compatible system integration</h2>
+        <ul>
+            <li>The data store becomes central</li>
+            <li>Sub-systems are orchestrated around it</li>
+        </ul>
+        <img 
+            src="./resources/animations/use_case/solid-integration_1.svg" 
+            type="image/svg+xml" 
+            class="schema place right bottom"
+            width="350">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Solid-compatible system integration</h2>
+        <ul>
+            <li>The data store becomes central</li>
+            <li>Sub-systems are orchestrated around it</li>
+        </ul>
+        <img 
+            src="./resources/animations/use_case/solid-integration_2.svg" 
+            type="image/svg+xml" 
+            class="schema place right bottom"
+            width="350">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2 class="section-title place center">Components of the Solid architecture</h2>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>The user</h2>
+            <li>They control the data.</li>
+            <li>They use apps to get services.</li>
+        </ul>
+        <img 
+            src="./resources/animations/architecture/1.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>The app</h2>
+            <li>It consumes the data.</li>
+            <li>It creates more data.</li>
+        </ul>
+        <img 
+            src="./resources/animations/architecture/2.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>The Pod</h2>
+            <li>It hosts the data.</li>
+            <li>It enforces access permissions.</li>
+        </ul>
+        <img 
+            src="./resources/animations/architecture/3.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>The Pod</h2>
+            <li>It hosts the data.</li>
+            <li>It enforces access permissions.</li>
+        </ul>
+        <img 
+            src="./resources/animations/architecture/3.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>The Identity Provider</h2>
+            <li>IdP for short.</li>
+            <li>It identifies the user.</li>
+        </ul>
+        <img 
+            src="./resources/animations/architecture/4.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Existing implementations</h2>
+        <div class="columns three">
+            <ul>
+                <h3>Pod server</h3>
+                <li><a href="https://github.com/solid/node-solid-server">NSS</a></li>
+                <li><a href="https://github.com/solid/community-server">CSS</a></li>
+                <li><a href="https://docs.inrupt.com/ess/">Inrupt's ESS</a></li>
+                <li>...</li>
+            </ul>
+            <ul>
+                <h3>Identity Provider</h3>
+                <li><a href="https://github.com/solid/node-solid-server">NSS</a></li>
+                <li><a href="https://github.com/solid/community-server">CSS</a></li>
+                <li><a href="https://docs.inrupt.com/ess/services/service-identity/">Inrupt's identity broker</a></li>
+            </ul>
+            <ul>
+                <h3>Apps</h3>
+                <li>Too many to list here!</li>
+                <li>See <a href="https://solidproject.org">solidproject.org</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2 class="section-title place center">Under the hood of Solid</h2>
+    </section>
+
+    <section class="slide">
+        <div class="section-title place center">
+            <h2>Under the hood of Solid</h2>
+            <h3>Logging in a Solid app</h3>
+        </div>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>Profile discovery</h2>
+            <li>The user provide their WebID to the app.</li>
+        </ul>
+        <img 
+            src="./resources/animations/login/1.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>IdP discovery</h2>
+            <li>The app looks up the user's profile</li>
+            <li>The profile links to the identity provider.</li>
+        </ul>
+        <img 
+            src="./resources/animations/login/2.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>The OIDC dance</h2>
+            <li>The user logs in the identity provider via OIDC</li>
+        </ul>
+        <img 
+            src="./resources/animations/login/3.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>OIDC outcome</h2>
+            <li>The app gets an access and an ID token.</li>
+            <li>The ID token contains the WebID</li>
+        </ul>
+        <img 
+            src="./resources/animations/login/4.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>Authenticated access</h2>
+            <li>The app can access private resources.</li>
+        </ul>
+        <img 
+            src="./resources/animations/login/5.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <div class="section-title place center">
+            <h2>Under the hood of Solid</h2>
+            <h3>Managing data in a Pod</h3>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>The Pod is an LDP server</h2>
+        <ul>
+            <li>Read/Write Linked Data</li>
+            <li>REST interface to RDF graphs</li>
+        </ul>
+        <img 
+            src="./resources/animations/manage-data/root.svg" 
+            type="image/svg+xml" 
+            class="figure-large">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Access controls as metadata</h2>
+        <ul>
+            <li>Resources have access metadata associated, discoverable via Link headers</li>
+            <li>Access control is in RDF too</li>
+        </ul>
+        <img 
+            src="./resources/animations/manage-data/root-private.svg" 
+            type="image/svg+xml" 
+            class="figure-large">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Read/Write RDF data</h2>
+        <ul>
+            <li>Content negociation</li>
+            <li>The expressivity of RDF</li>
+        </ul>
+        <img 
+            src="./resources/animations/manage-data/root-private-friends.svg" 
+            type="image/svg+xml" 
+            class="figure-large">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>LDP supports non-RDF data too</h2>
+        <ul>
+            <li>All-purpose data store</li>
+            <li>Content-type headers help the client</li>
+        </ul>
+        <img 
+            src="./resources/animations/manage-data/root-private-photos.svg" 
+            type="image/svg+xml" 
+            class="figure-large">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>LDP supports non-RDF data too</h2>
+        <ul>
+            <li>All-purpose data store</li>
+            <li>Content-type headers help the client</li>
+        </ul>
+        <img 
+            src="./resources/animations/manage-data/root-private-photos-dog.svg" 
+            type="image/svg+xml" 
+            class="figure-large">
+        </img>
+    </section>
+
+    <!-- <section class="slide">
+        <h2>Build your app</h2>
+        <ul>
+            <li><a href="https://www.npmjs.com/package/@inrupt/solid-client-authn-browser">@inrupt/solid-client-authn-browser</a> <a href="https://github.com/inrupt/solid-client-authn-js"><i class="fab fa-github"></i></a>: Authenticate a browser app.</li>
+        </ul>
+        <pre>
+<code class="javascript bg">const [session, setSession] = useState(new Session());
+useEffect(() => {
+    session.handleIncomingRedirect(window.location.href)
+        .then((info) => { console.log(`Logged in as ${info.webid}`) });
+    }
+}, [session]);</code>
+        </pre>
+    </section> -->
+
+    <!-- <section class="slide">
+        <h2>What we have...</h2>
+        <img class="place middle bottom" src="resources/img/ruben/apps_centralized.png"></img>
+        <p class="note place bottom left">Image courtesy of <a href="https://ruben.verborgh.org/">Ruben Verborgh</a></p>
+    </section>
+
+    <section class="slide">
+        <h2>What we have vs. what we want</h2>
+        <img class="place middle bottom" src="resources/img/ruben/apps_decentralized.png"></img>
+        <p class="note place bottom left">Image courtesy of <a href="https://ruben.verborgh.org/">Ruben Verborgh</a></p>
+    </section> -->
+    
+    
+
+    <section class="slide">
+        <h2 class="section-title place center">Solid app use cases</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Don't repeat yourself</h2>
+        <ul style="width: 30%;">
+            
+            <li>The user comes with their data.</li>
+            <li>Easier onboarding.</li>
+            <li>Experiment new apps!</li>
+        </ul>
+        <img 
+            src="./resources/animations/usage/dry.svg" 
+            type="image/svg+xml" 
+            class="schema rectangle place right bottom">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Reuse data from other apps</h2>
+
+        <ul>
+            <li>Decorralated app and data.</li>
+            <li>User-centric approach.</li>
+        </ul>
+        <img 
+            src="./resources/animations/usage/reuse.svg" 
+            type="image/svg+xml" 
+            class="schema rectangle place right bottom">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Exploring linked data</h2>
+        <ul>
+            <li>Data in a Pod is 5-<i class="fas fa-star"></i>.</li>
+        </ul>
+        <img 
+            src="./resources/animations/usage/explore.svg" 
+            type="image/svg+xml" 
+            class="schema rectangle place right bottom">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Global decentralized identity</h2>
+        <ul>
+            <li><b>Web-native</b> profiles</li>
+            <li>Seamless integration of <br> <b>"external" users</b></li>
+            <li>Access control is part of <br> the data</li>
+        </ul>
+        <img 
+            src="./resources/animations/usage/explore.svg" 
+            type="image/svg+xml" 
+            class="schema rectangle place right bottom">
+        </img>
+    </section>
+
+    <section class="slide">
+        <h2>Build your app</h2>
+        <ul>
+            <li><a href="https://www.npmjs.com/package/@inrupt/solid-client-authn-browser">@inrupt/solid-client-authn-browser</a> <a href="https://github.com/inrupt/solid-client-authn-js"><i class="fab fa-github"></i></a>: Authenticate an app.</li>
+            <li><a href="https://www.npmjs.com/package/@inrupt/solid-client">@inrupt/solid-client</a> <a href="https://github.com/inrupt/solid-client-js"><i class="fab fa-github"></i></a>: Read/write data and manage access to Pods.</li>
+            <li><a href="https://www.npmjs.com/package/@inrupt/solid-ui-react">@inrupt/solid-ui-react</a> <a href="https://github.com/inrupt/solid-ui-react"><i class="fab fa-github"></i></a>: React components around <code>solid-client</code>.</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Conclusion</h2>
+        <ul>
+            <li>Solid decorrelates data from apps</li>
+            <li>It adds access control on top of LDP</li>
+            <li>Linked data and global identity for a seamless, read/write Web</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>The future: shapes for interoperability</h2>
+        <ul>
+            <li>App side: Validate assumptions.</li>
+            <li>User side: Prevent corruption.</li>
+        </ul>
+        <img 
+            src="./resources/animations/usage/interoperability.svg" 
+            type="image/svg+xml" 
+            class="schema rectangle place right bottom">
+        </img>
+    </section>
+
+    <section class="slide">
+      <img class="place middle top logo-final" src="./resources/icons/solid.png"></img>
+      <div class="place middle bottom link-center">
+        <p><a href="https://solidproject.org">https://solidproject.org</a></p>
+        <p><a href="https://docs.inrupt.com/">https://docs.inrupt.com/</a></p>
+        <p><a href="https://zwifi.eu/slides/2020/data-sharing-winter-school/">https://zwifi.eu/slides/2020/data-sharing-winter-school/</a></p>
+      </div>
+  </section>
+
+    
+
+    <footer class="badge">
+        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+    <script src="shower/shower.js"></script>
+</body>
+</html>

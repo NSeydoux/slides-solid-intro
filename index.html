@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ROCED 2022</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css"></link>
+    <link rel="stylesheet" href="./style/style.css"></link>
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css"></link>
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+  <header class="caption">
+      <h1>Decentralized computing and personal data stores</h1>
+  </header>
+
+  <section class="slide">
+    <div class="section-title place center">
+      <h2>Decentralized computing and personal data stores</h2>
+      <h3>Nicolas Seydoux, PhD</h3>
+      <p>Developer at Inrupt, Solid community member</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Introductory use-case: Reasoning in "smart" homes</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Typical smart home use case</h2>
+    <ul>
+        <li>Remote control for connected devices</li>
+        <li>Data gathering, <strong>analytics and reporting</strong></li>
+        <li><strong>Scenario-based</strong> automation</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Use case: smart home deployment</h2>
+    <ul>
+        <li>The user has deployed:
+          <ul>
+            <li>Smart plugs, to monitor power consumption</li>
+            <li>Smoke detectors</li>
+            <li>Connected thermostat and weather station</li>
+            <li>Lighting system with presence sensors...</li>
+          </ul>
+        </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Use-case apps</h2>
+    <ul>
+        <li>App A: Rule-based reasoning
+          <ul>
+            <li>Light schedule scenario</li>
+            <li>Smoke detection</li>
+            <li>Temperature preferences</li>
+          </ul>
+        </li>
+        <li>App B: Machine-learning based
+          <ul>
+            <li>Power consumption profile</li>
+        </ul>
+        </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Typical approach and its limitations</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Cloud-based IoT service platforms</h2>
+    <ul>
+        <li>Data is sent from local network to remote platform</li>
+        <li>Cloud-based platform allows automation, analytics, remote control...</li>
+    </ul>
+    <img src="./resources/img/iot-deplyment" class="figure"/>
+  </section>
+
+  <section class="slide">
+    <h2>Service provider dependency</h2>
+    <ul>
+        <li>The data is controlled by the service provider</li>
+        <li>The user cannot migrate easily to another platform</li>
+    </ul>
+    <img src="./resources/img/random/insteon.jpg" class="figure"/>
+  </section>
+  
+  <section class="slide">
+    <h2>Privacy concerns</h2>
+    <ul>
+        <li>Smart home data is collected in an intimate setting.</li>
+        <li>Potential inference of personal information: 
+          <ul>
+            <li>Presence patterns at home</li>
+            <li>Religious practices</li>
+          </ul>
+        </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Interoperability issues</h2>
+    <ul>
+      <li>The data is controlled by the app</li>
+      <li>Systems may be isolated in silos</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Security vulnerabilities</h2>
+    <ul>
+      <li>Confidentiality
+        <ul>
+          <li>Concentration of many users data in one place</li>
+          <li>Data must be sent to a third party</li>
+        </ul>
+      <li>Availability
+        <ul>
+          <li>Single point of failure</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Shifting from Cloud to Fog computing</h2>
+    <ul>
+        <li>The user keeps the data on premise</li>
+        <li>Dispatching computing instead of data</li>
+        <li>Inference results flow in the hierarchy too</li>
+    </ul>
+    <img src="./resources/img/iot-deplyment" class="figure"/>
+    <p class="cite place bottom left">[N. Seydoux et al., 2019]</p>
+  </section>
+
+  <section class="slide">
+    <h2>Shifting from app-centric to user-centric</h2>
+    <ul>
+        <li>Each user is in control of their data</li>
+        <li>The data store may be self-hosted, or hosted by a trusted party</li>
+        <li>Migrating from one store to another is possible</li>
+        <li>Applications read data from the user-controlled store</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Solid, access control on top of Linked Data</h2>
+    <p class="cite place bottom left">[S. Capadisli et al., 2021]</p>
+  </section>
+
+  <section class="slide">
+    <ul>
+        <h2>The user</h2>
+        <li>They control the data.</li>
+        <li>They use apps to get services.</li>
+    </ul>
+    <img 
+        src="./resources/animations/architecture/1.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+</section>
+
+<section class="slide">
+    <ul>
+        <h2>The app</h2>
+        <li>It consumes the data: <b>reasoning</b>.</li>
+        <li>It produces more data: <b>inference</b>.</li>
+    </ul>
+    <img 
+        src="./resources/animations/architecture/2.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+</section>
+
+<section class="slide">
+    <ul>
+        <h2>The Pod</h2>
+        <li>It hosts the data.</li>
+        <li>It enforces access permissions.</li>
+    </ul>
+    <img 
+        src="./resources/animations/architecture/3.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+</section>
+
+<section class="slide">
+  <h2>The Identity Provider</h2>
+  <ul>
+      <li>It authenticates the user.</li>
+  </ul>
+  <img 
+      src="./resources/animations/architecture/4.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>The WebID</h2>
+  <ul>
+      <li>An IRI identifying the user.</li>
+      <li>WebID profile links to user data.</li>
+  </ul>
+  <img 
+      src="./resources/animations/login/solid-oidc/webid.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Authentication patterns</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Two patterns to access data</h2>
+    <ul>
+      <li>The User logs in the Client</li>
+      <li>The Client acts on its own behalf (bot)</li>
+    </ul>
+    <p class="cite place bottom left">[Coburn, A. et al, 2022]</p>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Authentication patterns: User login</h2>
+  </section>
+
+  <section class="slide">
+    <h2>User initiates login</h2>
+    <ul>
+      <li>The Client doesn't manage the User's identity</li>
+      <li>The Client dedirects the User to the IdP</li>
+  </ul>
+
+  <img 
+      src="./resources/animations/login/oidc/1_ro-login-rp.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+
+  </section>
+
+  <section class="slide">
+    <h2>User logs in</h2>
+    <ul>
+        <li>The authentication method is out of scope.</li>
+        <li>The Client never sees the User's credentials.</li>
+    </ul>
+    <img 
+        src="./resources/animations/login/oidc/2_ro-login-op.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>IdP redirects User back</h2>
+    <ul>
+        <li>The IdP provides the Client with a single-use code.</li>
+        <li>The IdP asociates the code to the Client.</li>
+    </ul>
+    <img 
+        src="./resources/animations/login//oidc/3_ro-redirect-rp.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>Client sends code</h2>
+    <ul>
+        <li>The Client sends the code to the IdP</li>
+    </ul>
+    <img 
+        src="./resources/animations/login//oidc/4_backchannel-request.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>IdP sends tokens</h2>
+    <ul>
+        <li>The ID token is meant for the Client.</li>
+        <li>The Access Token is meant for the Pod.</li>
+    </ul>
+    <img 
+        src="./resources/animations/login/solid-oidc/webid_backchannel-response.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>Authenticated access</h2>
+    <ul>
+        <li>The Client acts on behalf of the User.</li>
+        <li>The Client has its own identity too.</li>
+    </ul>
+    <img 
+    src="./resources/animations/login/solid-oidc/webid_authenticated-access.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Authentication patterns: Client login</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Developer registers Client</h2>
+    <ul>
+        <li>The IdP has information about the Client</li>
+        <li>The Client gets credentials.</li>
+    </ul>
+    <img 
+        src="./resources/animations/login/static-registration_1.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>Client logs in</h2>
+    <ul>
+        <li>The Client exchanges its credentials for tokens to the IdP</li>
+    </ul>
+    <img 
+      src="./resources/animations/login/static-registration_2.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+  </section>
+
+  <section class="slide">
+    <h2>Authenticated access</h2>
+    <ul>
+        <li>The Client acts on its own behalf.</li>
+    </ul>
+    <img 
+      src="./resources/animations/login/static-authenticated-access.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Navigating the data</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Discovering a user's<br/>data store</h2>
+    <img 
+        src="./resources/animations/data-discovery.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>Getting the Pod root</h2>
+    <img 
+        src="./resources/animations/manage-data/root.svg" 
+        type="image/svg+xml" 
+        class="schema rectangle">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>Traversing to a container</h2>
+    <img 
+        src="./resources/animations/manage-data/root-private.svg" 
+        type="image/svg+xml" 
+        class="schema rectangle">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>Getting an RDF resource</h2>
+    <img 
+        src="./resources/animations/manage-data/root-private-friends.svg" 
+        type="image/svg+xml" 
+        class="schema rectangle">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>Disovering more resources</h2>
+    <img 
+        src="./resources/animations/manage-data/root-private-photos.svg" 
+        type="image/svg+xml" 
+        class="schema rectangle">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>Getting a non-RDF resource</h2>
+    <img 
+        src="./resources/animations/manage-data/root-private-photos-dog.svg" 
+        type="image/svg+xml" 
+        class="schema rectangle">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Reasoning against Solid Pods</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Centralizing common,<br/>decentralizing individual</h2>
+    <ul>
+        <li>Not all data is personal
+          <ul>
+            <li>Vocabularies/instances</li>
+            <li>Devices datasheets/local deployments</li>
+            <li>"Common sense"/user preferences</li>
+          </ul>
+        </li>
+        <li><b>Private data</b> linked to <b>shared knowledge bases</b></li>
+    </ul>
+    <img 
+        src="./resources/animations/use_case/centralizing-truth.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+  </section>
+
+  <section class="slide">
+    <h2>Reasoning patterns: client side</h2>
+    <ul>
+        <li>Since the data is directly available to the client, all of the reasoning may happen in the browser</li>
+        <li>Lightwheight for the service provider</li>
+        <li>Entierly user-centric</li>
+        <li>User login authentication pattern</li>
+    </ul>
+    <p class="cite place bottom left">[Terdjimi, M. et a., 2018]</p>
+  </section>
+
+  <section class="slide">
+    <h2>Client-side reasoning use case</h2>
+    <ul>
+        <li>Suitable for scenarios centered on one user data</li>
+        <li>Power consumption analytics, complex event processing...</li>
+        <li>The user is logged in the app doing the reasoning</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Reasoning patterns: server-side</h2>
+    <ul>
+        <li>Data from multiple users is aggregated in a single graph</li>
+        <li>Allows to identify patterns beyond individual users</li>
+        <li>Bot login authentication pattern</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Server-side reasoning use case</h2>
+    <ul>
+        <li>Suitable for scenarios aggregating data from multiple users</li>
+        <li>Machine learning training, large-scale predictions...</li>
+        <li>Individual user data is collected by the app doing the reasoning</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Taking advantage of app/data separation</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Beyond app silos</h2>
+    <ul>
+        <li>All data for a user is available in their Pod</li>
+        <li>Not all apps need to harvest: data is collected once, reused infinitely</li>
+        <li>Power consumption data my be linked to thermostat and weather</li>
+    </ul>
+    <img src="resources/animations/usage/reuse.svg" class="figure"/>
+  </section>
+
+  <section class="slide">
+    <h2>Decentralizing chained inferences</h2>
+    <ul>
+        <li>A Pod is a read/write storage</li>
+        <li>Inferences on user data should be written back to the user's Pod</li>
+        <li>Inferences chained through the Pod instead of sequentially</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Challenges and discussion topics</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Interoperability, symbolic and numeric AI</h2>
+    <ul>
+        <li>Symbolic reasoning is a natural fit for Linked Data</li>
+        <li>Numerical approaches extremely powerful too, but act as black boxes.</li>
+        <li>How to make numerical models interoperable?</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Data discoverability</h2>
+    <ul>
+        <li>Data stored by Pod providers</li>
+        <li>A given app or user may not have access to some data from a source</li>
+        <li>User-centric apps only need one user's data</li>
+        <li>How to find many small datasets to train a model?</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>From individual to collective and back</h2>
+    <ul>
+        <li>User data needs to be consolidated into a single dataset for ML training</li>
+        <li>Performance issue: N data stores => N requests</li>
+        <li>Is it possible to adapt the result back to each individual user?</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Maintening provenance</h2>
+    <ul>
+        <li>A model is trained based on data from dynamic sources</li>
+        <li>What provenance information should be captured to keep the model accurate?</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Preserving privacy in sharing</h2>
+    <ul>
+        <li>Anonymizing data before sharing it</li>
+        <li>Temporal or spatial aggregtion at different scales</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title place center">Conclusion</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Reasoning and personal data stores</h2>
+    <ul>
+        <li>Solid is a set of specifications centering the data around the user</li>
+        <li>Different decentralized processing approaches are complementary</li>
+        <li>Decoupling data from applications offers new opportunities</li>
+    </ul>
+    <img src="resources/logos/solid-emblem.svg" class="figure"/>
+  </section>
+
+  <section class="slide bibliography">
+    <h2>Bibliography</h2>
+    <ul>
+      <li>A. Coburn, E. Pavlik, et D. Zagidulin, « Solid-OIDC ». [Online] 2022. https://solidproject.org/TR/oidc</li>
+      <li>S. Capadisli, T. Berners-Lee, R. Verborgh, and K. Kjernsmo, “Solid Protocol,” 2021. https://solidproject.org/TR/protocol.</li>
+      <li>N. Seydoux, K. Drira, N. Hernandez, et T. Monteil, « EDR: A Generic Approach for the Distribution of Rule-Based Reasoning in a Cloud-Fog continuum », Semantic Web Journal, 2019.</li>
+      <li>M. Terdjimi, L. Médini, et M. Mrissa, « Web Reasoning Using Fact Tagging », in Companion Proceedings of the The Web Conference 2018.
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <ul>
+      <li>Credit to fontawesome for the icons (<a href="https://fontawesome.com/license">license</a>)</li>
+    </ul>
+  </section>
+
+  <script src="shower/shower.js"></script>
+</body>
+</html>

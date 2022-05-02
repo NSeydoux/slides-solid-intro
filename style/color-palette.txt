@@ -1,0 +1,11 @@
+Baby Blue
+#d4f1f4
+
+Blue Green
+#75e6da
+
+Blue Grotto
+#189ab4
+
+Navy Blue
+#05445e

@@ -1,0 +1,295 @@
+<section class="slide">
+  <h2 class="section-title place center">An overview of OIDC stakeholders</h2>
+</section>
+
+<section class="slide">
+  <h2>The Resource Owner</h2>
+  <ul>
+      <li>(Fancy name for a user)</li>
+      <li>Controls the data.</li>
+      <li>Uses applications to get services.</li>
+  </ul>
+  <img 
+      src="./resources/animations/architecture/1.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>The Client</h2>
+  <ul>
+      <li>(Fancy name for an application)</li>
+      <li>Consumes the data.</li>
+      <li>Creates more data.</li>
+      <li>Receives delagation by the Resource Owner.</li>
+  </ul>
+  <img 
+      src="./resources/animations/architecture/2.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>The Resource Server</h2>
+  <ul>
+      <li>Fancy name for a Pod.</li>
+      <li>It hosts the data.</li>
+      <li>It enforces access permissions.</li>
+  </ul>
+  <img 
+      src="./resources/animations/architecture/3.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>The OIDC Provider</h2>
+  <ul>
+      <li>It is trusted by the Resource Owner.</li>
+      <li>It is trusted by the Resource Server.</li>
+      <li>This is where the Resource Owner account is.</li>
+  </ul>
+  <img 
+      src="./resources/animations/architecture/4.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2 class="section-title place center">Overview of the OIDC "dance"</h2>
+</section>
+
+<section class="slide">
+  <h2>RO requests login to Client</h2>
+  <ul>
+    <li>The Client doesn't manage the RO identity</li>
+    <li>The Client dedirects the RO to the OP</li>
+    <li>Some information about the client is sent to the OP</li>
+</ul>
+
+<img 
+      src="./resources/animations/login/oidc/1_ro-login-rp.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+
+</section>
+
+<section class="slide">
+  <h2>RO logs in OP</h2>
+  <ul>
+      <li>The RO authenticates to the OP.</li>
+      <li>The authentication method is out of scope.</li>
+      <li>The Client never sees the RO credentials.</li>
+  </ul>
+  <img 
+      src="./resources/animations/login/oidc/2_ro-login-op.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>OP gets RO consent</h2>
+  <ul>
+      <li>
+        The Client announces to OP<br/>what access it requires:
+        <ul>
+          <li>RO WebID</li>
+          <li>Permission to access data when RO is offline</li>
+        </ul>
+      </li>
+      <li>The RO can approve or deny.</li>
+      <li>OP asks only once.</li>
+  </ul>
+
+  <img 
+    src="./resources/animations/login/oidc/3_ro-consent-op.svg" 
+    type="image/svg+xml" 
+    class="schema place right">
+</img>
+
+</section>
+
+<section class="slide">
+  <h2>OP redirects RO to Client</h2>
+  <ul>
+      <li>The OP provides the Client with a single-use code.</li>
+      <li>The OP asociates the code to the Client.</li>
+  </ul>
+  <img 
+      src="./resources/animations/login//oidc/3_ro-redirect-rp.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>Client sends code</h2>
+  <ul>
+      <li>The Client sends the code to the OP <br/>along with its information.</li>
+      <li>(This is transparent to the RO.)</li>
+  </ul>
+  <img 
+      src="./resources/animations/login//oidc/4_backchannel-request.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>OP sends tokens</h2>
+  <ul>
+      <li>The ID token is meant for the Client.</li>
+      <li>The Access Token is meant for the RS.</li>
+  </ul>
+  <img 
+      src="./resources/animations/login/oidc/5_backchannel-response.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>Authenticated access</h2>
+  <ul>
+      <li>The Client can access private resources.</li>
+      <li>The OP lets the RO revoke the Access Token.</li>
+  </ul>
+  <img 
+  src="./resources/animations/login//oidc/6_authenticated-access.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <div class="section-title place center">
+    <h2>What does Solid-OIDC add?</h2>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="section-title place center">
+    <h2>What does Solid-OIDC add?</h2>
+    <h3>Universal user identity</h3>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>The RO has a WebID</h2>
+  <ul>
+      <li>The user identity is an IRI: the <strong>WebID</strong></li>
+      <li>This IRI points to a profile document</li>
+      <li>The profile doc enables discovering:
+        <ul>
+          <li>The RO's trusted OP</li>
+          <li>The RO's Pod root</li>
+        </ul>
+      </li>
+  </ul>
+  <img 
+    src="./resources/animations/login/solid-oidc/webid.svg" 
+    type="image/svg+xml" 
+    class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>OP signals WebID to Client</h2>
+  <ul>
+      <li>The ID token contains the WebID</li>
+      <li>The Client can discover the RO's profile</li>
+  </ul>
+  <img 
+    src="./resources/animations/login/solid-oidc/webid_backchannel-response.svg" 
+    type="image/svg+xml" 
+    class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <div class="section-title place center">
+    <h2>What does Solid-OIDC add?</h2>
+    <h3>Universal Client identity</h3>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>OIDC security model</h2>
+  <ul>
+      <li>The Client controls some IRI known to the OP</li>
+      <li>Tokens are only sent to this trusted IRI</li>
+  </ul>
+  <img 
+    src="./resources/animations/login/solid-oidc/webid_backchannel-response.svg" 
+    type="image/svg+xml" 
+    class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+  <h2>In OIDC:<br/>Static client registration</h2>
+  <ul>
+      <li>The developer registers Client to the OP.</li>
+      <li>The obtained Client credentials are long-lasting.</li>
+      <li>Suitable for a server-side Client</li>
+  </ul>
+  <img 
+      src="./resources/animations/login/solid-oidc/static-registration.svg" 
+      type="image/svg+xml" 
+      class="schema place right">
+  </img>
+</section>
+
+<section class="slide">
+<h2>In OIDC:<br/>Dynamic client registration</h2>
+<ul>
+    <li>Client information is provided at runtime</li>
+    <li>De facto anonymous Client: anybody can get identifiers</li>
+    <li>The Client credentials are ephemeral</li>
+    <li>Suitable for browser-side apps</li>
+</ul>
+<img 
+    src="./resources/animations/login/solid-oidc/dynamic-registration.svg" 
+    type="image/svg+xml" 
+    class="schema place right">
+</img>
+</section>
+
+<section class="slide">
+<h2>In Solid-OIDC:<br/>Client Identifiers</h2>
+<ul>
+    <li>No manual registration to the OP:<br/>Client information is discovered from Client Identifier</li>
+    <li>The Client ID is Client-controlled</li>
+</ul>
+<img 
+    src="./resources/animations/login/solid-oidc/client_identifier.svg" 
+    type="image/svg+xml" 
+    class="schema place right">
+</img>
+</section>
+
+<section class="slide">
+<h2>OP signals Client Identifier</h2>
+<ul>
+    <li>The ID token also includes the Client Identifier</li>
+</ul>
+<img 
+    src="./resources/animations/login/solid-oidc/client_identifier_backchannel-response.svg" 
+    type="image/svg+xml" 
+    class="schema place right">
+</img>
+</section>
+
+<section class="slide">
+  <h2>TODO</h2>
+  <ul>
+      <li>Explain the AS design pattern</li>
+      <li>Explain how the AS verifies RO trusts OP</li>
+  </ul>
+</section>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Solid, data not included</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css"></link>
+    <link rel="stylesheet" href="./style/style.css"></link>
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css"></link>
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>App WebID with Solid-OIDC</h1>
+    </header>
+
+    <section class="slide">
+      <ul>
+          <h2>Static client registration</h2>
+          <li>The developer register their app to the IdP.</li>
+      </ul>
+      <img 
+          src="./resources/animations/login/static-registration_1.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+  </section>
+
+  <section class="slide">
+    <ul>
+        <h2>App registration</h2>
+        <li>The developer register their app to the IdP.</li>
+    </ul>
+    <img 
+        src="./resources/animations/login/static-registration_2.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+</section>
+
+    <section class="slide">
+      <ul>
+          <h2>Profile discovery</h2>
+          <li>The user provide their WebID to the app.</li>
+      </ul>
+      <img 
+          src="./resources/animations/login/1.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+  </section>
+
+  <section class="slide">
+      <ul>
+          <h2>IdP discovery</h2>
+          <li>The app looks up the user's profile</li>
+          <li>The profile links to the identity provider.</li>
+      </ul>
+      <img 
+          src="./resources/animations/login/2.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+  </section>
+
+  <section class="slide">
+    <ul>
+        <h2>Dynamic client registration</h2>
+        <li>Only if not statically registered</li>
+        <li>The client ID is only temporary</li>
+    </ul>
+    <img 
+        src="./resources/animations/login/dynamic-registration.svg" 
+        type="image/svg+xml" 
+        class="schema place right">
+    </img>
+</section>
+
+    <section class="slide">
+        <ul>
+            <h2>The OIDC dance</h2>
+            <li>The user logs in the identity provider via OIDC</li>
+            <li>The user is redirected to the app</li>
+            <li>The app does an authenticated request to the IdP</li>
+        </ul>
+        <img 
+            src="./resources/animations/login/3.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>OIDC outcome</h2>
+            <li>The app gets an access and an ID token.</li>
+            <li>The ID token contains the WebID</li>
+        </ul>
+        <img 
+            src="./resources/animations/login/4.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <h2>Authenticated access</h2>
+            <li>The app can access private resources.</li>
+        </ul>
+        <img 
+            src="./resources/animations/login/5.svg" 
+            type="image/svg+xml" 
+            class="schema place right">
+        </img>
+    </section>
+
+    <section class="slide">
+      <ul>
+          <h2>Client WebID</h2>
+          <li>No manual registration to the IdP</li>
+          <li>The client ID is permanent</li>
+          <li>Application access control can be enforced</li>
+      </ul>
+      <img 
+          src="./resources/animations/login/client_webid.svg" 
+          type="image/svg+xml" 
+          class="schema place right">
+      </img>
+  </section>
+
+  <section class="slide">
+    <ul>
+      <li>Credit to fontawesome for the icons (<a href="https://fontawesome.com/license">license</a>)</li>
+    </ul>
+  </section>
+
+  <script src="shower/shower.js"></script>
+</body>
+</html>

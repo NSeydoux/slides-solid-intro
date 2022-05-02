@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="271.63092mm"
+   height="332.08115mm"
+   viewBox="0 0 271.63092 332.08115"
+   version="1.1"
+   id="svg195"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="linked_data_3.svg">
+  <defs
+     id="defs189">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1570"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Send"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1558"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend-8"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1570-4"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="58.299343"
+     inkscape:cy="701.81831"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata192">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(60.588478,-1.6915676)">
+    <g
+       id="g55"
+       transform="matrix(0.26458333,0,0,0.26458333,25.692812,100.08769)">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:currentColor"
+         d="M 131.88281,0 C 119.15244,6.6567641e-5 106.9431,5.0568322 97.941406,14.058594 L 14.058594,97.941406 C 5.0568336,106.9431 7e-5,119.15244 0,131.88281 V 464 c 0,26.51 21.49,48 48,48 h 288 c 26.51,0 48,-21.49 48,-48 V 48 C 384,21.49 362.51,0 336,0 Z M 176,48 H 336 V 464 H 48 V 176 h 104 c 13.255,0 24,-10.745 24,-24 z m -48,3.882812 V 128 H 51.882812 Z"
+         id="path2" />
+      <rect
+         style="fill:#ffffff;stroke-width:18.89763832;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect46"
+         width="224.54237"
+         height="227.79662"
+         x="79.18644"
+         y="206.1017" />
+    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot17"
+       style="font-style:normal;font-weight:normal;font-size:192px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,25.692812,100.08769)"><flowRegion
+         id="flowRegion19"
+         style="font-size:192px"><rect
+           id="rect21"
+           width="260.33899"
+           height="194.16949"
+           x="64"
+           y="225.62712"
+           style="font-size:192px" /></flowRegion><flowPara
+         id="flowPara23"
+         style="font-size:192px">PDF</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot25"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,25.692812,100.08769)"><flowRegion
+         id="flowRegion27"><rect
+           id="rect29"
+           width="266.84744"
+           height="200.67799"
+           x="55.322033"
+           y="219.11864" /></flowRegion><flowPara
+         id="flowPara31"
+         style="font-size:192px">PDF</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:25.39999962px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="43.288864"
+       y="195.37357"
+       id="text35"><tspan
+         sodipodi:role="line"
+         id="tspan33"
+         x="43.288864"
+         y="195.37357"
+         style="font-size:29.98611111px;stroke-width:0.26458332;-inkscape-font-specification:'sans-serif Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal">CSV</tspan></text>
+    <path
+       inkscape:transform-center-x="1.8740883e-06"
+       inkscape:transform-center-y="1.9246153e-06"
+       d="m 37.990594,113.95682 -6.358909,-3.42929 -6.429931,3.2942 1.296439,-7.10739 -5.119929,-5.09726 7.160153,-0.96332 3.265641,-6.444485 3.128778,6.512025 7.138206,1.11436 -5.226461,4.98797 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="1.5813591"
+       sodipodi:arg1="0.9530406"
+       sodipodi:r2="5.4397216"
+       sodipodi:r1="10.879444"
+       sodipodi:cy="105.08811"
+       sodipodi:cx="31.689142"
+       sodipodi:sides="5"
+       id="path35"
+       style="stroke-width:1.54366302;stroke-miterlimit:4;stroke-dasharray:none"
+       sodipodi:type="star" />
+  </g>
+</svg>
